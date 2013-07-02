@@ -17,11 +17,9 @@ Nome do arquivo enviado -> 12123123000112_20132404_1630.csv
 
 Uma vez recebido e validado o arquivo, o mesmo irá entrar em uma "fila" de processamento.
 
-O arquivo csv será importado inicialmente para uma "base temporária". Após validação automatizada e sem a necessidade de intervenção humana, os registros serão finalmente atualizados no banco de dados real da aplicação. Será feita uma atualização ("update") para os "produtos+loja" já existente, registrando a data/hora da atualização, e os produtos inexistentes serão criados no banco ("insert").
-
 O envio do arquivo deve ser feito utilizando o método HTTP POST na url http://valor-da-construcao.herokuapp.com/scom.xml passando os seguintes parâmetros:
 
-products_file (arquivo CSV); tipo: file.
+products_file (arquivo CSV)
 
 A autenticação é feita através do HTTP BASIC AUTHENTICATION, passando como parametros o usuário e senha fornecidos pela equipe do valor da construção.
 
@@ -31,3 +29,6 @@ Se o arquivo for sincronizado com sucesso ele retornará nesse XML a lista de pr
 
 Se houver algum erro o sistema retornará uma mensagem com o erro no retorno XML.
 
+Dentro da pasta "EXEMPLO/" encontra-se o arquivo 12123123000112_20132404_1630.csv que deve ser usado para testes.
+
+Uma versão em java do script para integração também está disponível dentro da pasta "Java/"
