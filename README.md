@@ -7,15 +7,26 @@ Para realizar a integração foi criado um webservice onde será feito o post do
 
 O nome deste arquivo será formado pelo "CNPJ" da empresa + Data de Geração do Arquivo + Hora de Geração do Arquivo, separados por "_", no seguinte formato:
 
-asdf
-Ex:
   - CNPJ : 12.123.123/0001-12 (serão utilizados apenas numeros); 
   - Data de Geração do Arquivo : 24/04/2013 (será utilizada em formato YYYYMMDD)
   - Hora de Geração do Arquivo : 16:30 (será utilizada em formato HHMM)
 
-Nome do arquivo enviado -> <b>12123123000112_20132404_1630.csv</b>
+Exemplo: <b>12123123000112_20132404_1630.csv</b>
 
-Uma vez recebido e validado o arquivo, o mesmo irá entrar em uma "fila" de processamento.
+O arquivo deverá seguir o seguinte padrão:
+
+- Separação da colunas por ponto e virgula ";"
+- O valor das campos dentro da coluna entre aspas
+- Disposição das colunas:
+  - Coluna 1 = Codigo do fabricante
+  - Coluna 2 = Codigo de barras (opcional)
+  - Coluna 3 = Codigo do sistema de origem (opcional)
+  - Coluna 4 = Descricao
+  - Coluna 5 = Marca
+  - Coluna 6 = Unidade
+  - Coluna 7 = Preço a vista
+  - Coluna 8 = Estoque disponível (opcional)
+  - Coluna 9 = CNPJ da loja (opcional)
 
 O envio do arquivo deve ser feito utilizando o método HTTP POST na url http://valor-da-construcao.herokuapp.com/scom.xml passando os seguintes parâmetros:
 
