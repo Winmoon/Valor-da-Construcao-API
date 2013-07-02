@@ -31,13 +31,13 @@ public class SendFile {
 			String url = "http://valor-da-construcao.herokuapp.com/scom.xml";
 
 			// Usuário
-			String username = "valordaconstrucao";
+			String username = "USUARIO";
 
 			// Senha
-			String pass = "uyP4RnNMGe4coOm6kIcfAt9E1S8AHK9wwHqPZO9xz7I";
+			String pass = "SENHA";
 
 			// Arquivo de integração
-			String file = "/Users/Diego/Downloads/26042013110500_17200461000100_prod.txt";
+			String file = "/caminho_do_arquivo/26042013110500_17200461000100_prod.txt";
 
 			// Envia o arquivo
 			List<Map<String, String>> products = postFile(url, file, username, pass);
