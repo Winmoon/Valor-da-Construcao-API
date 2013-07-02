@@ -28,11 +28,11 @@ O arquivo deverá seguir o seguinte padrão:
   - Coluna 8 = Estoque disponível (opcional)
   - Coluna 9 = CNPJ da loja (opcional)
 
-O envio do arquivo deve ser feito utilizando o método HTTP POST na url http://valor-da-construcao.herokuapp.com/scom.xml passando os seguintes parâmetros:
+O envio do arquivo deve ser feito utilizando o método <b>HTTP POST</b> na url http://valor-da-construcao.herokuapp.com/scom.xml passando os seguintes parâmetros:
 
-products_file (arquivo CSV)
+- <b>products_file (arquivo CSV)</b>
 
-A autenticação é feita através do HTTP BASIC AUTHENTICATION, passando como parametros o usuário e senha fornecidos pela equipe do valor da construção.
+A autenticação é feita através do <b>HTTP BASIC AUTHENTICATION</b>, passando como parametros o usuário e senha fornecidos pela equipe do valor da construção.
 
 Após executar o envio do arquivo o sistema retornará um XML com o status do envio. 
 
@@ -40,6 +40,6 @@ Se o arquivo for sincronizado com sucesso ele retornará nesse XML a lista de pr
 
 Se houver algum erro o sistema retornará uma mensagem com o erro no retorno XML.
 
-Dentro da pasta "EXEMPLO/" encontra-se o arquivo 12123123000112_20132404_1630.csv que deve ser usado para testes.
+Dentro da pasta <b>"EXEMPLO/"</b> encontra-se o arquivo <b>12123123000112_20132404_1630.csv</b> que deve ser usado para testes.
 
-Uma versão em java do script para integração também está disponível dentro da pasta "Java/"
+Uma versão em java do script para integração também está disponível dentro da pasta <b>"Java/"</b>
